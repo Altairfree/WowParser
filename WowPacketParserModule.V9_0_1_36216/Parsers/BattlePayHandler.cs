@@ -312,6 +312,11 @@ namespace WowPacketParserModule.V9_0_1_36216.Parsers
             ReadBattlePayDistributionObject(packet);
         }
 
+        [Parser(Opcode.SMSG_BATTLE_PAY_VAS_BOOST_CONSUMED)]
+        public static void HandleBattlePayBoostConsumed(Packet packet)
+        {
+            packet.ReadBits("UnkBits1");
+        }
 
     }
 }
